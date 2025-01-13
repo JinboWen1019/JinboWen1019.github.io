@@ -36,14 +36,15 @@ Academic Services
 
 Review for Journals
 ======
-1.  IEEE Internet of Things Journal (Q1, IF: 8.2)
-2.  IEEE Transactions on Cognitive Communications and Networking (Q1, IF: 7.4)
-3.  IEEE Transactions on Vehicular Technology (Q2, IF: 6.1)
-4.  IEEE Open Journal of Vehicular Technology (Q1, IF: 5.3)
-5.  IEEE Wireless Communications (Q1, IF: 10.9)
-6.  IEEE Communications Magazine (Q2, IF: 8.3)
-7.  IEEE Transactions on Information Forensics & Security
-8.  IEEE Transactions on Machine Learning in Communications and Networking
+1.  IEEE Communications Surveys & Tutorials (Q1, IF: 34.4)
+2.  IEEE Internet of Things Journal (Q1, IF: 8.2)
+3.  IEEE Transactions on Cognitive Communications and Networking (Q1, IF: 7.4)
+4.  IEEE Transactions on Vehicular Technology (Q2, IF: 6.1)
+5.  IEEE Open Journal of Vehicular Technology (Q1, IF: 5.3)
+6.  IEEE Wireless Communications (Q1, IF: 10.9)
+7.  IEEE Communications Magazine (Q2, IF: 8.3)
+8.  IEEE Transactions on Information Forensics & Security
+9.  IEEE Transactions on Machine Learning in Communications and Networking
 <!-- 8.  EURASIP Journal on Wireless Communications and Networking -->
 <!-- 9.  International Journal of Network Management -->
 <!-- 10. Transactions on Emerging Telecommunications Technologies -->
