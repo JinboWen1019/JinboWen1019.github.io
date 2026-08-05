@@ -214,16 +214,12 @@ a:hover { color: var(--blue-bright); }
 
 .contact-list a:hover { color: var(--blue); }
 .contact-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
-  color: var(--blue);
-  font-size: 0.95rem;
-  font-weight: 700;
+  display: block;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  object-fit: contain;
 }
-
-.contact-icon--gh { font-size: 0.66rem; letter-spacing: -0.04em; }
 
 .content { min-width: 0; padding: 0 0 40px; }
 .section {
@@ -401,8 +397,8 @@ a:hover { color: var(--blue-bright); }
   grid-template-columns: 32px 76px 1fr;
   align-items: center;
   gap: 11px;
-  min-height: 62px;
-  padding: 9px 4px;
+  min-height: 52px;
+  padding: 4px;
 }
 
 .news-icon {
@@ -415,7 +411,7 @@ a:hover { color: var(--blue-bright); }
 .news-list time {
   color: var(--blue);
   font-size: 0.79rem;
-  font-weight: 750;
+  font-weight: 800;
   font-variant-numeric: tabular-nums;
 }
 .news-list p { margin: 0; color: #554a42; font-size: 0.95rem; }
@@ -448,12 +444,13 @@ a:hover { color: var(--blue-bright); }
 .timeline-date {
   color: var(--blue);
   font-size: 0.76rem;
-  font-weight: 750;
+  font-weight: 800;
   letter-spacing: 0.025em;
 }
 .timeline h3 { margin: 3px 0 2px; font-size: 1.02rem; }
 .timeline p { margin: 0; color: #5c5149; font-size: 0.94rem; }
 .timeline small { color: var(--muted); font-size: 0.79rem; }
+.rank-highlight { color: #a7272d; font-weight: 800; }
 
 .experience-card {
   padding: 0;
@@ -480,13 +477,8 @@ a:hover { color: var(--blue-bright); }
 .experience-card ul { margin: 0; padding-left: 1.25rem; color: #554b43; font-size: 0.93rem; }
 .experience-card li + li { margin-top: 5px; }
 
-.section-intro {
-  margin: -8px 0 34px !important;
-  color: var(--muted) !important;
-  font-size: 0.86rem;
-}
-
 .publication-group { margin-top: 39px; }
+.publications-section > .section-heading + .publication-group { margin-top: 8px; }
 .publication-group--collab {
   margin-top: 62px;
   padding-top: 38px;
@@ -646,6 +638,13 @@ a:hover { color: var(--blue-bright); }
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Songti SC", Georgia, serif;
   font-weight: 600;
   letter-spacing: 0.025em;
+}
+
+.news-list time,
+.timeline-date,
+.experience-label,
+.honor-list time {
+  font-weight: 800;
 }
 
 .site-footer {
