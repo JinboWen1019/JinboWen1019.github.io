@@ -146,7 +146,7 @@ a:hover { color: var(--blue-bright); }
   aspect-ratio: 1;
   margin-bottom: 20px;
   color: #fff;
-  border: 6px solid #fff;
+  border: 0;
   border-radius: 50%;
   background: #ffffff;
   font-family: Georgia, "Times New Roman", serif;
@@ -304,15 +304,15 @@ a:hover { color: var(--blue-bright); }
 .interest-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 26px;
   margin-top: 31px;
 }
 
 .interest-card {
   min-width: 0;
-  overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 10px;
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
   background: #fff;
 }
 
@@ -320,7 +320,7 @@ a:hover { color: var(--blue-bright); }
   display: flex;
   align-items: baseline;
   gap: 9px;
-  padding: 16px 17px 12px;
+  padding: 0 0 12px;
 }
 
 .interest-card__head span {
@@ -339,7 +339,7 @@ a:hover { color: var(--blue-bright); }
   position: relative;
   height: 112px;
   overflow: hidden;
-  background: #ead9ca;
+  background: #ffffff;
 }
 
 .interest-card__visual::after {
@@ -365,7 +365,7 @@ a:hover { color: var(--blue-bright); }
 .interest-card small {
   display: block;
   min-height: 61px;
-  padding: 12px 17px 14px;
+  padding: 12px 0 0;
   color: var(--muted);
   font-size: 0.76rem;
   line-height: 1.45;
@@ -374,11 +374,11 @@ a:hover { color: var(--blue-bright); }
 .news-list {
   position: relative;
   height: 228px;
-  padding: 8px 12px 10px 18px;
+  padding: 0 12px 0 0;
   overflow-y: scroll;
   overscroll-behavior: contain;
-  border: 1px solid #f0ddd5;
-  border-radius: 10px;
+  border: 0;
+  border-radius: 0;
   background: #ffffff;
   scrollbar-color: #ce4a4d #f5e8e2;
   scrollbar-width: auto;
@@ -453,10 +453,9 @@ a:hover { color: var(--blue-bright); }
 .timeline small { color: var(--muted); font-size: 0.79rem; }
 
 .experience-card {
-  padding: 25px 27px;
-  border: 1px solid var(--line);
-  border-left: 3px solid var(--blue);
-  border-radius: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
   background: #ffffff;
 }
 .experience-head {
@@ -716,7 +715,7 @@ a:hover { color: var(--blue-bright); }
   body { font-size: 15px; }
   .section { padding: 44px 0; }
   .profile-sticky { grid-template-columns: 82px 1fr; column-gap: 17px; }
-  .avatar { width: 82px; font-size: 1.65rem; border-width: 4px; }
+  .avatar { width: 82px; font-size: 1.65rem; }
   .profile h1 { font-size: 1.25rem; }
   .profile-role { font-size: 0.8rem; }
   .profile-location { font-size: 0.73rem; }
@@ -728,7 +727,7 @@ a:hover { color: var(--blue-bright); }
   .news-list { padding: 5px 14px; }
   .news-list article { grid-template-columns: 28px 58px 1fr; gap: 8px; }
   .news-icon { width: 27px; height: 27px; }
-  .experience-card { padding: 20px; }
+  .experience-card { padding: 0; }
   .experience-head { display: block; }
   .experience-card time { display: block; margin-top: 5px; }
   .publication { grid-template-columns: 1fr; gap: 2px; padding: 19px 0 21px; }
