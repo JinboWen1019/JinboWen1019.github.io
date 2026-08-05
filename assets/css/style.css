@@ -1,13 +1,13 @@
 :root {
-  --ink: #342d28;
-  --muted: #766a60;
-  --line: #e8ddd2;
-  --line-soft: #f0e8df;
-  --paper: #fffdf9;
-  --wash: #faf5ee;
-  --blue: #b45f3d;
-  --blue-bright: #91462d;
-  --blue-soft: #f8e9df;
+  --ink: #352925;
+  --muted: #75635c;
+  --line: #ead8d0;
+  --line-soft: #f3e7e1;
+  --paper: #fffefd;
+  --wash: #fff7f3;
+  --blue: #c43d3d;
+  --blue-bright: #a7272d;
+  --blue-soft: #ffe9e5;
   --gold: #a76b22;
   --gold-soft: #fff2d9;
   --shadow: 0 12px 34px rgba(96, 62, 41, 0.1);
@@ -65,8 +65,8 @@ a:hover { color: var(--blue-bright); }
   z-index: 100;
   top: 0;
   height: var(--header-height);
-  border-bottom: 1px solid rgba(232, 221, 210, 0.94);
-  background: rgba(255, 253, 249, 0.95);
+  border-bottom: 1px solid rgba(234, 216, 208, 0.94);
+  background: rgba(255, 254, 253, 0.96);
   backdrop-filter: blur(14px);
 }
 
@@ -108,8 +108,8 @@ a:hover { color: var(--blue-bright); }
   right: 0;
   bottom: -8px;
   left: 0;
-  height: 2px;
-  background: var(--blue);
+  height: 3px;
+  background: linear-gradient(90deg, #e45d4f, #bd2938);
   content: "";
   transform: scaleX(0);
   transition: transform 160ms ease;
@@ -148,12 +148,12 @@ a:hover { color: var(--blue-bright); }
   aspect-ratio: 1;
   margin-bottom: 20px;
   color: #fff;
-  border: 6px solid #fffaf4;
+  border: 6px solid #fff;
   border-radius: 50%;
   background:
     radial-gradient(circle at 34% 26%, rgba(255, 255, 255, 0.22), transparent 30%),
     linear-gradient(145deg, #cb7b58, #8e472f 70%);
-  box-shadow: 0 0 0 1px var(--line), var(--shadow);
+  box-shadow: 0 0 0 2px #f4d8d1, var(--shadow);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 2.65rem;
   font-weight: 700;
@@ -191,7 +191,7 @@ a:hover { color: var(--blue-bright); }
 
 .profile-location span {
   margin-right: 7px;
-  color: var(--blue);
+  color: #cf303b;
   font-size: 0.55rem;
   vertical-align: 2px;
 }
@@ -280,16 +280,21 @@ a:hover { color: var(--blue-bright); }
 .section-icon {
   display: grid;
   place-items: center;
-  width: 32px;
-  height: 32px;
-  flex: 0 0 32px;
-  color: #fffaf4;
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  padding: 4px;
   border: 0;
-  border-radius: 50%;
-  background: linear-gradient(145deg, #c87853, #a65134);
-  box-shadow: 0 4px 12px rgba(164, 78, 49, 0.22);
-  font-size: 0.78rem;
-  font-weight: 800;
+  border-radius: 13px;
+  background: linear-gradient(145deg, #fff, #fff0ea);
+  box-shadow: 0 5px 15px rgba(185, 55, 56, 0.15), inset 0 0 0 1px rgba(211, 82, 77, 0.1);
+}
+
+.section-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .section-more {
@@ -314,7 +319,7 @@ a:hover { color: var(--blue-bright); }
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 10px;
-  background: #fffaf5;
+  background: #fff;
   box-shadow: 0 8px 24px rgba(98, 64, 43, 0.07);
 }
 
@@ -326,7 +331,7 @@ a:hover { color: var(--blue-bright); }
 }
 
 .interest-card__head span {
-  color: #c17a55;
+  color: #cf3d3f;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 0.74rem;
   font-weight: 700;
@@ -374,34 +379,43 @@ a:hover { color: var(--blue-bright); }
 }
 
 .news-list {
-  max-height: 282px;
-  padding: 10px 20px 11px;
-  overflow-y: auto;
-  border: 0;
+  position: relative;
+  height: 228px;
+  padding: 8px 12px 10px 18px;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
+  border: 1px solid #f0ddd5;
   border-radius: 10px;
-  background: var(--wash);
-  scrollbar-color: #c7a88f transparent;
-  scrollbar-width: thin;
+  background: linear-gradient(135deg, #fffdfb, var(--wash));
+  scrollbar-color: #ce4a4d #f5e8e2;
+  scrollbar-width: auto;
 }
+
+.news-list::-webkit-scrollbar { width: 12px; }
+.news-list::-webkit-scrollbar-track { border-radius: 10px; background: #f5e8e2; }
+.news-list::-webkit-scrollbar-thumb {
+  border: 3px solid #f5e8e2;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #e56759, #c63140);
+}
+.news-list::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #d84b4c, #a91f30); }
 
 .news-list article {
   display: grid;
-  grid-template-columns: 14px 76px 1fr;
-  align-items: baseline;
-  gap: 10px;
-  padding: 11px 0;
+  grid-template-columns: 32px 76px 1fr;
+  align-items: center;
+  gap: 11px;
+  min-height: 62px;
+  padding: 9px 4px;
 }
 
-.news-dot {
-  width: 8px;
-  height: 8px;
-  border: 2px solid #fff7ef;
-  border-radius: 50%;
-  background: #c76f49;
-  box-shadow: 0 0 0 2px rgba(199, 111, 73, 0.2);
+.news-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 4px rgba(110, 50, 36, 0.12));
 }
-
-.news-list article:nth-child(2n) .news-dot { background: #d59a45; box-shadow: 0 0 0 2px rgba(213, 154, 69, 0.2); }
 .news-list time {
   color: var(--blue);
   font-size: 0.79rem;
@@ -431,7 +445,7 @@ a:hover { color: var(--blue-bright); }
   left: -28px;
   width: 11px;
   height: 11px;
-  border: 3px solid #fffaf4;
+  border: 3px solid #fff;
   border-radius: 50%;
   background: var(--blue);
   box-shadow: 0 0 0 1px var(--blue);
@@ -492,7 +506,7 @@ a:hover { color: var(--blue-bright); }
   gap: 18px;
   margin-bottom: 7px;
   padding-bottom: 15px;
-  border-bottom: 2px solid #aa5738;
+  border-bottom: 2px solid #c33b3e;
 }
 .publication-group-title > div { display: flex; align-items: baseline; gap: 13px; }
 .publication-group-title h3 {
@@ -501,7 +515,7 @@ a:hover { color: var(--blue-bright); }
   font-size: 1.18rem;
 }
 .group-index {
-  color: #bd7957;
+  color: #cf4b4c;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 0.8rem;
   font-weight: 700;
@@ -711,7 +725,8 @@ a:hover { color: var(--blue-bright); }
   .interest-grid { gap: 8px; }
   .interest-card__visual { height: 142px; }
   .news-list { padding: 5px 14px; }
-  .news-list article { grid-template-columns: 12px 58px 1fr; gap: 8px; }
+  .news-list article { grid-template-columns: 28px 58px 1fr; gap: 8px; }
+  .news-icon { width: 27px; height: 27px; }
   .experience-card { padding: 20px; }
   .experience-head { display: block; }
   .experience-card time { display: block; margin-top: 5px; }
