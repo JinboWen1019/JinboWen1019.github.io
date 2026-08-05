@@ -10,6 +10,7 @@
   --blue-soft: #ffe9e5;
   --gold: #a76b22;
   --gold-soft: #fff2d9;
+  --date-font-size: 14px;
   --header-height: 66px;
   --content-width: 1180px;
 }
@@ -224,7 +225,7 @@ a:hover { color: var(--blue-bright); }
 .content { min-width: 0; padding: 0 0 40px; }
 .section {
   padding: 56px 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 0;
 }
 .section--first { padding-top: 66px; }
 
@@ -410,7 +411,7 @@ a:hover { color: var(--blue-bright); }
 }
 .news-list time {
   color: var(--blue);
-  font-size: 0.79rem;
+  font-size: var(--date-font-size);
   font-weight: 800;
   font-variant-numeric: tabular-nums;
 }
@@ -443,14 +444,18 @@ a:hover { color: var(--blue-bright); }
 }
 .timeline-date {
   color: var(--blue);
-  font-size: 0.76rem;
+  font-size: var(--date-font-size);
   font-weight: 800;
   letter-spacing: 0.025em;
 }
 .timeline h3 { margin: 3px 0 2px; font-size: 1.02rem; }
 .timeline p { margin: 0; color: #5c5149; font-size: 0.94rem; }
 .timeline small { color: var(--muted); font-size: 0.79rem; }
-.rank-highlight { color: #a7272d; font-weight: 800; }
+.rank-highlight {
+  color: #ee0000;
+  font-family: Arial, sans-serif;
+  font-weight: 800;
+}
 
 .experience-card {
   padding: 0;
@@ -518,7 +523,7 @@ a:hover { color: var(--blue-bright); }
   padding: 22px 3px 23px;
   border-bottom: 1px solid var(--line-soft);
 }
-.publication:last-child { border-bottom-color: var(--line); }
+.publication:last-child { border-bottom: 0; }
 .publication--review { background: #ffffff; }
 .pub-year {
   padding-top: 2px;
@@ -615,6 +620,8 @@ a:hover { color: var(--blue-bright); }
 .service-list li:nth-child(n) .detail-list__dot {
   background: #8f1f2d;
 }
+
+.honor-list time { font-size: var(--date-font-size); }
 
 .talk-list li { grid-template-columns: 13px 92px minmax(0, 1fr); }
 .talk-list h3 {
