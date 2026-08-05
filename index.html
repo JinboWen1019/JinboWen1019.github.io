@@ -28,6 +28,7 @@
         <a href="#experience">Experience</a>
         <a href="#publications">Publications</a>
         <a href="#honors">Honors</a>
+        <a href="#invited-talks">Talks</a>
         <a href="#service">Service</a>
       </nav>
     </div>
@@ -71,17 +72,16 @@
           </li>
         </ul>
 
-        <div class="profile-focus">
-          <span>Research interests</span>
-          <p>Generative AI · Mechanism Design · Wireless Communication &amp; Networking</p>
-        </div>
       </div>
     </aside>
 
     <main id="main-content" class="content">
       <section id="about" class="section section--first">
         <span class="eyebrow">Hello, I’m Jinbo.</span>
-        <h2>About Me</h2>
+        <div class="section-heading section-heading--about">
+          <span class="section-icon" aria-hidden="true">✦</span>
+          <h2>About Me</h2>
+        </div>
         <p>
           I will join the <a href="https://www.cityu.edu.hk/cs/" target="_blank" rel="noopener noreferrer">Department of Computer Science</a>
           at <a href="https://www.cityu.edu.hk/" target="_blank" rel="noopener noreferrer">City University of Hong Kong</a>
@@ -98,29 +98,47 @@
         </p>
 
         <div class="interest-grid" aria-label="Research interests">
-          <div><span>01</span><strong>Generative AI</strong><small>LLM agents, diffusion models, and AIGC networks</small></div>
-          <div><span>02</span><strong>Mechanism Design</strong><small>Contract theory, games, and resource incentives</small></div>
-          <div><span>03</span><strong>Future Networks</strong><small>6G, digital twins, IoT, and blockchain systems</small></div>
+          <article class="interest-card">
+            <div class="interest-card__head"><span>01</span><strong>Generative AI</strong></div>
+            <div class="interest-card__visual interest-card__visual--ai">
+              <img src="images/papers/system.png" alt="Technical system architecture illustrating distributed AI and virtual network nodes">
+            </div>
+            <small>LLM agents, diffusion models, and AIGC networks</small>
+          </article>
+          <article class="interest-card">
+            <div class="interest-card__head"><span>02</span><strong>Mechanism Design</strong></div>
+            <div class="interest-card__visual interest-card__visual--mechanism">
+              <img src="images/papers/system.png" alt="Technical architecture illustrating incentives, relays, and resource coordination">
+            </div>
+            <small>Contract theory, games, and resource incentives</small>
+          </article>
+          <article class="interest-card">
+            <div class="interest-card__head"><span>03</span><strong>Future Networks</strong></div>
+            <div class="interest-card__visual interest-card__visual--networks">
+              <img src="images/papers/system.png" alt="Technical architecture illustrating cross-chain and future network coordination">
+            </div>
+            <small>6G, digital twins, IoT, and blockchain systems</small>
+          </article>
         </div>
       </section>
 
       <section id="news" class="section">
         <div class="section-heading">
-          <span class="section-icon" aria-hidden="true">◆</span>
+          <span class="section-icon" aria-hidden="true">●</span>
           <h2>News</h2>
         </div>
         <div class="news-list">
-          <article><time datetime="2026-09">2026.09</time><p>I will begin my Ph.D. in Computer Science at City University of Hong Kong.</p></article>
-          <article><time datetime="2026">2026</time><p>Our work on HybridRAG-based LLM agents was published in <strong>IEEE TMC</strong>.</p></article>
-          <article><time datetime="2026">2026</time><p>Our diffusion-based dynamic contract work was published in <strong>IEEE TSC</strong>.</p></article>
-          <article><time datetime="2025">2025</time><p>Received the Best Paper Award at ECNCT 2025.</p></article>
-          <article><time datetime="2023">2023</time><p>Received Best Paper Awards at ICDCS Workshops 2023 and ECNCT 2023.</p></article>
+          <article><span class="news-dot" aria-hidden="true"></span><time datetime="2026-09">2026.09</time><p>I will begin my Ph.D. in Computer Science at City University of Hong Kong.</p></article>
+          <article><span class="news-dot" aria-hidden="true"></span><time datetime="2026">2026</time><p>Our work on HybridRAG-based LLM agents was published in <strong>IEEE TMC</strong>.</p></article>
+          <article><span class="news-dot" aria-hidden="true"></span><time datetime="2026">2026</time><p>Our diffusion-based dynamic contract work was published in <strong>IEEE TSC</strong>.</p></article>
+          <article><span class="news-dot" aria-hidden="true"></span><time datetime="2025">2025</time><p>Received the Best Paper Award at ECNCT 2025.</p></article>
+          <article><span class="news-dot" aria-hidden="true"></span><time datetime="2023">2023</time><p>Received Best Paper Awards at ICDCS Workshops 2023 and ECNCT 2023.</p></article>
         </div>
       </section>
 
       <section id="education" class="section">
         <div class="section-heading">
-          <span class="section-icon" aria-hidden="true">▣</span>
+          <span class="section-icon" aria-hidden="true">◆</span>
           <h2>Education</h2>
         </div>
         <div class="timeline">
@@ -150,7 +168,7 @@
 
       <section id="experience" class="section">
         <div class="section-heading">
-          <span class="section-icon" aria-hidden="true">⌁</span>
+          <span class="section-icon" aria-hidden="true">◈</span>
           <h2>Research Experience</h2>
         </div>
         <article class="experience-card">
@@ -172,7 +190,7 @@
 
       <section id="publications" class="section publications-section">
         <div class="section-heading">
-          <span class="section-icon" aria-hidden="true">▤</span>
+          <span class="section-icon" aria-hidden="true">▰</span>
           <h2>Selected Publications</h2>
           <a class="section-more" href="https://scholar.google.com/citations?user=IOGP8E8AAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Full list on Google Scholar ↗</a>
         </div>
@@ -364,36 +382,50 @@
 
       <section id="honors" class="section">
         <div class="section-heading">
-          <span class="section-icon" aria-hidden="true">✦</span>
+          <span class="section-icon" aria-hidden="true">★</span>
           <h2>Honors &amp; Awards</h2>
         </div>
-        <div class="award-grid">
-          <article><time>2026</time><h3>National Starship Outstanding Graduate Student</h3><p>Selected as one of 11 recipients.</p></article>
-          <article><time>2026</time><h3>Outstanding Graduate of NUAA</h3></article>
-          <article><time>2025</time><h3>National Scholarship</h3></article>
-          <article><time>2025</time><h3>Best Paper Award, ECNCT</h3><p>The only Best Paper Award in 2025.</p></article>
-          <article><time>2025</time><h3>Outstanding Paper Awards</h3><p>Guangdong Computer Academy (Second Prize) and GBA Society of AI &amp; Automation (First Prize).</p></article>
-          <article><time>2023</time><h3>Best Paper Awards</h3><p>ICDCS Workshops 2023 and ECNCT 2023.</p></article>
+        <ul class="detail-list honor-list">
+          <li><span class="detail-list__dot" aria-hidden="true"></span><time>2026</time><p><strong>National Starship Outstanding Graduate Student</strong> — selected as one of 11 recipients.</p></li>
+          <li><span class="detail-list__dot" aria-hidden="true"></span><time>2026</time><p><strong>Outstanding Graduate of NUAA</strong></p></li>
+          <li><span class="detail-list__dot" aria-hidden="true"></span><time>2025</time><p><strong>National Scholarship</strong></p></li>
+          <li><span class="detail-list__dot" aria-hidden="true"></span><time>2025</time><p><strong>Best Paper Award, ECNCT</strong> — the only Best Paper Award in 2025.</p></li>
+          <li><span class="detail-list__dot" aria-hidden="true"></span><time>2025</time><p><strong>Outstanding Paper Awards</strong> — Guangdong Computer Academy (Second Prize) and GBA Society of AI &amp; Automation (First Prize).</p></li>
+          <li><span class="detail-list__dot" aria-hidden="true"></span><time>2023</time><p><strong>Best Paper Awards</strong> — ICDCS Workshops 2023 and ECNCT 2023.</p></li>
+        </ul>
+      </section>
+
+      <section id="invited-talks" class="section">
+        <div class="section-heading">
+          <span class="section-icon" aria-hidden="true">▶</span>
+          <h2>Invited Talks</h2>
         </div>
+        <ul class="detail-list talk-list">
+          <li>
+            <span class="detail-list__dot" aria-hidden="true"></span>
+            <span class="detail-list__meta">Online Talk</span>
+            <div>
+              <h3>Generative AI-Empowered Optimization for Low-Altitude Economy Networks</h3>
+              <p>Invited by the Young Scientists Association of the School of Navigation, Wuhan University of Technology, as part of its Young Scholars Academic Salon.</p>
+              <p class="talk-title-zh" lang="zh-CN">“生成式AI赋能低空经济网络优化”</p>
+            </div>
+          </li>
+        </ul>
       </section>
 
       <section id="service" class="section">
         <div class="section-heading">
-          <span class="section-icon" aria-hidden="true">◎</span>
+          <span class="section-icon" aria-hidden="true">✓</span>
           <h2>Academic Service</h2>
         </div>
-        <div class="service-grid">
-          <article>
-            <span class="service-kicker">Journal Reviewing</span>
-            <h3>Selected journals</h3>
-            <p>IEEE COMST, TMC, TSC, TIFS, TDSC, TWC, TC, TCCN, TNSE, IoTJ, TVT, IEEE Network, and IEEE Wireless Communications.</p>
-          </article>
-          <article>
-            <span class="service-kicker">Program Committees</span>
-            <h3>Selected conferences</h3>
-            <p>AAAI 2027; IEEE ICCC 2025–2026; IEEE ICC, TrustCom, WCSP, and ICNC 2025; IEEE GLOBECOM, VTC, Metaverse, SmartCity, and iThings.</p>
-          </article>
-        </div>
+        <ul class="detail-list service-list">
+          <li><span class="detail-list__dot" aria-hidden="true"></span><span class="detail-list__meta">Journal Reviewer</span><p><strong>IEEE Communications Surveys &amp; Tutorials</strong></p></li>
+          <li><span class="detail-list__dot" aria-hidden="true"></span><span class="detail-list__meta">Journal Reviewer</span><p><strong>IEEE Transactions on Mobile Computing, IEEE Transactions on Services Computing, IEEE Transactions on Information Forensics and Security,</strong> and <strong>IEEE Transactions on Dependable and Secure Computing</strong></p></li>
+          <li><span class="detail-list__dot" aria-hidden="true"></span><span class="detail-list__meta">Journal Reviewer</span><p><strong>IEEE Transactions on Wireless Communications, IEEE Transactions on Communications, IEEE TCCN, IEEE TNSE, IEEE IoTJ,</strong> and <strong>IEEE TVT</strong></p></li>
+          <li><span class="detail-list__dot" aria-hidden="true"></span><span class="detail-list__meta">TPC Member</span><p><strong>AAAI 2027</strong></p></li>
+          <li><span class="detail-list__dot" aria-hidden="true"></span><span class="detail-list__meta">TPC Member</span><p><strong>IEEE ICCC 2025–2026, IEEE ICC 2025, IEEE TrustCom 2025, IEEE WCSP 2025,</strong> and <strong>IEEE ICNC 2025</strong></p></li>
+          <li><span class="detail-list__dot" aria-hidden="true"></span><span class="detail-list__meta">TPC Member</span><p><strong>IEEE GLOBECOM, IEEE VTC, IEEE Metaverse, IEEE SmartCity,</strong> and <strong>IEEE iThings</strong></p></li>
+        </ul>
       </section>
 
       <footer class="site-footer">
