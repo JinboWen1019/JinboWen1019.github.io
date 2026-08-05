@@ -19,6 +19,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: calc(var(--header-height) + 24px);
+  font-size: 17px;
 }
 
 body {
@@ -26,7 +27,7 @@ body {
   color: var(--ink);
   background: var(--paper);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.68;
   -webkit-font-smoothing: antialiased;
 }
@@ -241,7 +242,8 @@ a:hover { color: var(--blue-bright); }
 
 .section h3 { color: #44372f; }
 .section > p {
-  max-width: 830px;
+  width: 100%;
+  max-width: none;
   margin: 18px 0 0;
   color: #51473f;
 }
@@ -304,15 +306,16 @@ a:hover { color: var(--blue-bright); }
 .interest-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
+  gap: 18px;
   margin-top: 31px;
 }
 
 .interest-card {
   min-width: 0;
-  overflow: visible;
-  border: 0;
-  border-radius: 0;
+  overflow: hidden;
+  border: 1px solid #ead8d0;
+  border-top: 3px solid #a7272d;
+  border-radius: 9px;
   background: #fff;
 }
 
@@ -320,19 +323,19 @@ a:hover { color: var(--blue-bright); }
   display: flex;
   align-items: baseline;
   gap: 9px;
-  padding: 0 0 12px;
+  padding: 15px 16px 12px;
 }
 
 .interest-card__head span {
   color: #cf3d3f;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.74rem;
+  font-size: 0.78rem;
   font-weight: 700;
 }
 
 .interest-card__head strong {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 0.96rem;
+  font-size: 1rem;
 }
 
 .interest-card__visual {
@@ -365,9 +368,9 @@ a:hover { color: var(--blue-bright); }
 .interest-card small {
   display: block;
   min-height: 61px;
-  padding: 12px 0 0;
+  padding: 12px 16px 15px;
   color: var(--muted);
-  font-size: 0.76rem;
+  font-size: 0.82rem;
   line-height: 1.45;
 }
 
@@ -415,7 +418,7 @@ a:hover { color: var(--blue-bright); }
   font-weight: 750;
   font-variant-numeric: tabular-nums;
 }
-.news-list p { margin: 0; color: #554a42; font-size: 0.91rem; }
+.news-list p { margin: 0; color: #554a42; font-size: 0.95rem; }
 
 .timeline {
   position: relative;
@@ -449,7 +452,7 @@ a:hover { color: var(--blue-bright); }
   letter-spacing: 0.025em;
 }
 .timeline h3 { margin: 3px 0 2px; font-size: 1.02rem; }
-.timeline p { margin: 0; color: #5c5149; font-size: 0.9rem; }
+.timeline p { margin: 0; color: #5c5149; font-size: 0.94rem; }
 .timeline small { color: var(--muted); font-size: 0.79rem; }
 
 .experience-card {
@@ -473,8 +476,8 @@ a:hover { color: var(--blue-bright); }
 }
 .experience-card h3 { margin: 3px 0 0; font-size: 1.05rem; }
 .experience-card time { color: var(--muted); font-size: 0.78rem; white-space: nowrap; }
-.experience-card > p { margin: 7px 0 12px; color: var(--muted); font-size: 0.83rem; }
-.experience-card ul { margin: 0; padding-left: 1.25rem; color: #554b43; font-size: 0.88rem; }
+.experience-card > p { margin: 7px 0 12px; color: var(--muted); font-size: 0.88rem; }
+.experience-card ul { margin: 0; padding-left: 1.25rem; color: #554b43; font-size: 0.93rem; }
 .experience-card li + li { margin-top: 5px; }
 
 .section-intro {
@@ -542,7 +545,7 @@ a:hover { color: var(--blue-bright); }
 }
 .pub-title:hover { color: var(--blue-bright); text-decoration: underline; }
 .pub-authors,
-.pub-venue { margin: 5px 0 0; color: #6e6259; font-size: 0.79rem; line-height: 1.52; }
+.pub-venue { margin: 5px 0 0; color: #6e6259; font-size: 0.84rem; line-height: 1.52; }
 .pub-authors strong { color: #3c3029; }
 .pub-venue { margin-top: 2px; color: #7b6f66; }
 .pub-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
@@ -609,10 +612,17 @@ a:hover { color: var(--blue-bright); }
   text-transform: uppercase;
 }
 
-.detail-list p { margin: 0; color: #574c44; font-size: 0.88rem; line-height: 1.58; }
+.detail-list p { margin: 0; color: #574c44; font-size: 0.93rem; line-height: 1.58; }
 .detail-list strong { color: #3f332c; }
 
 .service-list li { grid-template-columns: 13px 110px minmax(0, 1fr); }
+
+.honor-list .detail-list__dot,
+.service-list .detail-list__dot,
+.honor-list li:nth-child(n) .detail-list__dot,
+.service-list li:nth-child(n) .detail-list__dot {
+  background: #8f1f2d;
+}
 
 .talk-list li { grid-template-columns: 13px 92px minmax(0, 1fr); }
 .talk-list h3 {
@@ -712,7 +722,8 @@ a:hover { color: var(--blue-bright); }
 }
 
 @media (max-width: 560px) {
-  body { font-size: 15px; }
+  html { font-size: 16px; }
+  body { font-size: 1rem; }
   .section { padding: 44px 0; }
   .profile-sticky { grid-template-columns: 82px 1fr; column-gap: 17px; }
   .avatar { width: 82px; font-size: 1.65rem; }
