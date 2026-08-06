@@ -464,6 +464,14 @@ a:hover { color: var(--blue-bright); }
   font-variant-numeric: tabular-nums;
 }
 .news-list p { margin: 0; color: #554a42; font-size: calc(0.95rem + var(--font-bump)); }
+.news-highlight {
+  color: #b52f3b;
+  font-weight: 800;
+}
+.news-accent {
+  color: #b52f3b;
+  font-weight: inherit;
+}
 
 .timeline {
   position: relative;
@@ -660,16 +668,26 @@ a:hover { color: var(--blue-bright); }
 .detail-list p { margin: 0; color: #574c44; font-size: calc(0.93rem + var(--font-bump)); line-height: 1.58; }
 .detail-list strong { color: #3f332c; }
 
-.service-list { gap: 16px; }
-.service-list li {
-  grid-template-columns: 13px 110px minmax(0, 1fr);
-  padding: 6px 0;
+.service-groups { display: grid; gap: 30px; }
+.service-group h3 {
+  margin: 0 0 12px;
+  color: #44372f;
+  font-size: calc(1rem + var(--font-bump));
 }
+.service-group ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 1.25rem;
+  color: #574c44;
+  font-size: calc(0.93rem + var(--font-bump));
+  line-height: 1.58;
+}
+.service-group li::marker { color: #8f1f2d; }
+.service-group li span { color: #b52f3b; font-weight: 600; }
 
 .honor-list .detail-list__dot,
-.service-list .detail-list__dot,
-.honor-list li:nth-child(n) .detail-list__dot,
-.service-list li:nth-child(n) .detail-list__dot {
+.honor-list li:nth-child(n) .detail-list__dot {
   background: #8f1f2d;
 }
 
@@ -805,14 +823,7 @@ a:hover { color: var(--blue-bright); }
   .publication-group-title > div { align-items: flex-start; }
   .publication-group-title h3 { font-size: calc(1.02rem + var(--font-bump)); }
   .detail-list li { grid-template-columns: 12px 63px minmax(0, 1fr); gap: 8px; }
-  .service-list li {
-    grid-template-columns: 12px minmax(0, 1fr);
-    column-gap: 8px;
-    row-gap: 4px;
-  }
-  .service-list .detail-list__dot { grid-column: 1; grid-row: 1; }
-  .service-list .detail-list__meta { grid-column: 2; grid-row: 1; }
-  .service-list p { grid-column: 2; grid-row: 2; }
+  .service-groups { gap: 25px; }
   .talk-list li { grid-template-columns: 12px 72px minmax(0, 1fr); }
   .site-footer { display: block; }
   .site-footer p + p { margin-top: 4px; }
