@@ -1,8 +1,51 @@
 (() => {
+  const root = document.documentElement;
+  const themeToggle = document.querySelector('.theme-toggle');
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('.site-nav');
   const links = [...document.querySelectorAll('.site-nav a[href^="#"]')];
   const sections = [...document.querySelectorAll('main section[id]')];
+
+  const getSavedTheme = () => {
+    try {
+      return localStorage.getItem('theme');
+    } catch (error) {
+      return null;
+    }
+  };
+
+  const applyTheme = (theme) => {
+    const isDark = theme === 'dark';
+    root.dataset.theme = isDark ? 'dark' : 'light';
+    root.style.colorScheme = isDark ? 'dark' : 'light';
+    if (themeToggle) {
+      const nextTheme = isDark ? 'light' : 'dark';
+      themeToggle.setAttribute('aria-label', `Switch to ${nextTheme} mode`);
+      themeToggle.setAttribute('title', `Switch to ${nextTheme} mode`);
+      themeToggle.setAttribute('aria-pressed', String(isDark));
+    }
+    if (themeColor) themeColor.setAttribute('content', isDark ? '#1b1715' : '#c43d3d');
+  };
+
+  applyTheme(root.dataset.theme || (systemTheme.matches ? 'dark' : 'light'));
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const nextTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      try {
+        localStorage.setItem('theme', nextTheme);
+      } catch (error) {
+        // The selected theme still applies for this visit if storage is unavailable.
+      }
+      applyTheme(nextTheme);
+    });
+  }
+
+  systemTheme.addEventListener('change', (event) => {
+    if (!getSavedTheme()) applyTheme(event.matches ? 'dark' : 'light');
+  });
 
   if (toggle && nav) {
     toggle.addEventListener('click', () => {

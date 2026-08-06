@@ -7,10 +7,21 @@
   <meta name="author" content="Jinbo Wen">
   <meta name="theme-color" content="#c43d3d">
   <title>Jinbo Wen</title>
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem('theme');
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.dataset.theme = savedTheme || systemTheme;
+      } catch (error) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=20260806-cv-verified">
-  <script src="assets/js/main.js?v=20260805-nav" defer></script>
+  <link rel="stylesheet" href="assets/css/style.css?v=20260806-dark-mode">
+  <script src="assets/js/main.js?v=20260806-dark-mode" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
@@ -18,20 +29,26 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="site-title" href="#about" aria-label="Jinbo Wen, home">Jinbo Wen</a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Toggle navigation</span>
-        <span></span><span></span><span></span>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#publications">Publications</a>
-        <a href="#honors">Honors</a>
-        <a href="#invited-talks">Talks</a>
-        <a href="#service">Service</a>
-      </nav>
+      <div class="header-actions">
+        <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#news">News</a>
+          <a href="#education">Education</a>
+          <a href="#experience">Experience</a>
+          <a href="#publications">Publications</a>
+          <a href="#honors">Honors</a>
+          <a href="#invited-talks">Talks</a>
+          <a href="#service">Service</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+          <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.7 15.5A8.5 8.5 0 0 1 8.5 3.3 8.5 8.5 0 1 0 20.7 15.5Z"/></svg>
+          <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.2A4.8 4.8 0 1 0 12 16.8 4.8 4.8 0 0 0 12 7.2ZM12 1.5 13.2 4 10.8 4 12 1.5ZM12 22.5 10.8 20 13.2 20 12 22.5ZM1.5 12 4 10.8 4 13.2 1.5 12ZM22.5 12 20 13.2 20 10.8 22.5 12ZM4.6 4.6 7.2 5.5 5.5 7.2 4.6 4.6ZM19.4 19.4 16.8 18.5 18.5 16.8 19.4 19.4ZM4.6 19.4 5.5 16.8 7.2 18.5 4.6 19.4ZM19.4 4.6 18.5 7.2 16.8 5.5 19.4 4.6Z"/></svg>
+        </button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </header>
 
