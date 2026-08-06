@@ -1,3 +1,51 @@
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/lato/Lato-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/lato/Lato-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 500 699;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/lato/Lato-BoldItalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 500 699;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/lato/Lato-Bold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/lato/Lato-BoldItalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 700 900;
+  font-display: swap;
+}
+
 :root {
   --ink: #352925;
   --muted: #75635c;
@@ -27,7 +75,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 1rem;
   line-height: 1.68;
   -webkit-font-smoothing: antialiased;
@@ -81,7 +129,7 @@ a:hover { color: var(--blue-bright); }
 
 .site-title {
   color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 1.23rem;
   font-weight: 700;
   letter-spacing: 0.01em;
@@ -151,7 +199,7 @@ a:hover { color: var(--blue-bright); }
   border: 0;
   border-radius: 50%;
   background: #ffffff;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 2.65rem;
   font-weight: 700;
   letter-spacing: -0.04em;
@@ -168,7 +216,7 @@ a:hover { color: var(--blue-bright); }
 
 .profile h1 {
   margin: 0 0 5px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 1.55rem;
   line-height: 1.25;
 }
@@ -232,7 +280,7 @@ a:hover { color: var(--blue-bright); }
 .section h2 {
   margin: 0;
   color: #3d3028;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: clamp(1.62rem, 3vw, 2.05rem);
   line-height: 1.2;
 }
@@ -255,7 +303,7 @@ a:hover { color: var(--blue-bright); }
   display: block;
   margin-bottom: 10px;
   color: var(--blue);
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 1rem;
   font-style: italic;
   font-weight: 600;
@@ -325,13 +373,13 @@ a:hover { color: var(--blue-bright); }
 
 .interest-card__head span {
   color: #cf3d3f;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
 }
 
 .interest-card__head strong {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 1rem;
 }
 
@@ -452,7 +500,7 @@ a:hover { color: var(--blue-bright); }
 .timeline small { color: var(--muted); font-size: 0.79rem; }
 .rank-highlight {
   color: #ee0000;
-  font-family: Arial, sans-serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-weight: 800;
 }
 
@@ -500,12 +548,12 @@ a:hover { color: var(--blue-bright); }
 .publication-group-title > div { display: flex; align-items: baseline; gap: 13px; }
 .publication-group-title h3 {
   margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 1.18rem;
 }
 .group-index {
   color: #cf4b4c;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 0.8rem;
   font-weight: 700;
 }
@@ -527,13 +575,13 @@ a:hover { color: var(--blue-bright); }
 .pub-year {
   padding-top: 2px;
   color: #9a8778;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 0.77rem;
   font-weight: 700;
 }
 .pub-title {
   color: #70402f;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.43;
@@ -629,7 +677,7 @@ a:hover { color: var(--blue-bright); }
 .talk-list li { grid-template-columns: 13px 92px minmax(0, 1fr); }
 .talk-list h3 {
   margin: 0 0 5px;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-size: 1rem;
   line-height: 1.42;
 }
@@ -645,7 +693,7 @@ a:hover { color: var(--blue-bright); }
 .detail-list__meta,
 .talk-list .talk-title-zh {
   color: #b52f3b;
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, "Songti SC", Georgia, serif;
+  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
   font-weight: 600;
   letter-spacing: 0.025em;
 }
