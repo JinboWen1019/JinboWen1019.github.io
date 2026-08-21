@@ -41,7 +41,8 @@ jobs:
 
           expected_website_id = os.environ["UMAMI_WEBSITE_ID"]
           share_slug = os.environ["UMAMI_SHARE_SLUG"]
-          share_url = "https://cloud.umami.is/api/share/" + urllib.parse.quote(share_slug, safe="")
+          api_base = "https://api.umami.is/v1/us"
+          share_url = api_base + "/share/" + urllib.parse.quote(share_slug, safe="")
           share_request = urllib.request.Request(
               share_url,
               headers={
@@ -59,7 +60,7 @@ jobs:
               raise RuntimeError("Umami returned invalid share credentials")
 
           query = urllib.parse.urlencode({"startAt": 0, "endAt": int(time.time() * 1000)})
-          url = f"https://cloud.umami.is/api/websites/{website_id}/stats?{query}"
+          url = f"{api_base}/websites/{website_id}/stats?{query}"
           request = urllib.request.Request(
               url,
               headers={
