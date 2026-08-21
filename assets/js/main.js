@@ -100,4 +100,23 @@
 
   const year = document.querySelector('#current-year');
   if (year) year.textContent = String(new Date().getFullYear());
+
+  const visitorStat = document.querySelector('#visitor-stat');
+  const visitorCount = document.querySelector('#visitor-count');
+
+  if (visitorStat && visitorCount) {
+    fetch('assets/data/visitor-count.json', { cache: 'no-store' })
+      .then((response) => {
+        if (!response.ok) throw new Error('Visitor count is unavailable.');
+        return response.json();
+      })
+      .then((data) => {
+        if (!Number.isSafeInteger(data.visitors) || data.visitors < 0 || !data.updatedAt) return;
+        visitorCount.textContent = new Intl.NumberFormat('en-US').format(data.visitors);
+        visitorStat.hidden = false;
+      })
+      .catch(() => {
+        // Keep the optional public counter hidden until fresh data is available.
+      });
+  }
 })();
