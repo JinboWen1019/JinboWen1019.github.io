@@ -41,7 +41,7 @@ jobs:
 
           expected_website_id = os.environ["UMAMI_WEBSITE_ID"]
           share_slug = os.environ["UMAMI_SHARE_SLUG"]
-          api_base = "https://api.umami.is/v1/us"
+          api_base = "https://cloud.umami.is/analytics/us/api"
           share_url = api_base + "/share/" + urllib.parse.quote(share_slug, safe="")
           share_request = urllib.request.Request(
               share_url,
