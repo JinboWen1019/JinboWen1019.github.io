@@ -910,7 +910,7 @@ html[data-theme="dark"] .contact-icon { filter: brightness(0) saturate(100%) inv
   .publication-group-title { align-items: flex-start; }
   .publication-group-title > div { align-items: flex-start; }
   .publication-group-title h3 { font-size: calc(1.02rem + var(--font-bump)); }
-  .detail-list li { grid-template-columns: 12px 63px minmax(0, 1fr); gap: 8px; }
+  .detail-list li { grid-template-columns: 12px 78px minmax(0, 1fr); gap: 8px; }
   .service-groups { gap: 25px; }
   .talk-list li { grid-template-columns: 12px 72px minmax(0, 1fr); }
   .site-footer { display: block; }
