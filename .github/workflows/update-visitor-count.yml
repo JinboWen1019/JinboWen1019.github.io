@@ -16,7 +16,7 @@ jobs:
   update:
     runs-on: ubuntu-latest
     env:
-      UMAMI_API_KEY: ${{ secrets.UMAMI_API_KEY }}
+      UMAMI_SHARE_SLUG: ${{ secrets.UMAMI_SHARE_SLUG }}
       UMAMI_WEBSITE_ID: 503cabd6-53f9-453b-8d97-c8c85639f7c7
     steps:
       - name: Check out the homepage
@@ -25,8 +25,8 @@ jobs:
       - name: Fetch the all-time visitor count
         shell: bash
         run: |
-          if [ -z "$UMAMI_API_KEY" ]; then
-            echo "UMAMI_API_KEY is not configured; leaving the public counter hidden."
+          if [ -z "$UMAMI_SHARE_SLUG" ]; then
+            echo "UMAMI_SHARE_SLUG is not configured; leaving the public counter hidden."
             exit 0
           fi
 
@@ -39,16 +39,34 @@ jobs:
           import urllib.request
           from datetime import datetime, timezone
 
-          website_id = os.environ["UMAMI_WEBSITE_ID"]
-          api_key = os.environ["UMAMI_API_KEY"]
+          expected_website_id = os.environ["UMAMI_WEBSITE_ID"]
+          share_slug = os.environ["UMAMI_SHARE_SLUG"]
+          share_url = "https://cloud.umami.is/api/share/" + urllib.parse.quote(share_slug, safe="")
+          share_request = urllib.request.Request(
+              share_url,
+              headers={
+                  "Accept": "application/json",
+                  "User-Agent": "JinboWen1019.github.io visitor counter",
+              },
+          )
+
+          with urllib.request.urlopen(share_request, timeout=30) as response:
+              share = json.load(response)
+
+          website_id = share.get("websiteId")
+          share_token = share.get("token")
+          if website_id != expected_website_id or not isinstance(share_token, str):
+              raise RuntimeError("Umami returned invalid share credentials")
+
           query = urllib.parse.urlencode({"startAt": 0, "endAt": int(time.time() * 1000)})
-          url = f"https://api.umami.is/v1/websites/{website_id}/stats?{query}"
+          url = f"https://cloud.umami.is/api/websites/{website_id}/stats?{query}"
           request = urllib.request.Request(
               url,
               headers={
                   "Accept": "application/json",
-                  "Authorization": f"Bearer {api_key}",
                   "User-Agent": "JinboWen1019.github.io visitor counter",
+                  "x-umami-share-token": share_token,
+                  "x-umami-share-context": "1",
               },
           )
 
