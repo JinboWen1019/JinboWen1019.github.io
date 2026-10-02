@@ -1,7 +1,7 @@
 Hi, I'm Jinbo Wen. This is my profile [jinbowen1019.github.io](https://jinbowen1019.github.io/)
 
 ## 💬 Personal Information
-🔭 A Ph.D. student at City University of Hong Kong.
+🔭 A Ph.D. Student at City University of Hong Kong.
 
 ## 🌱 Languages and Tools
 <table>
