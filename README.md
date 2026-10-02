@@ -3,7 +3,7 @@ Hi, I'm Jinbo Wen. This is my profile [jinbowen1019.github.io](https://jinbowen1
 ## 💬 Personal Information
 🔭 A Ph.D. student at City University of Hong Kong.
 
-## 🌱 Languages and Tools:
+## 🌱 Languages and Tools
 <table>
 <tbody>
   <tr>
@@ -14,6 +14,6 @@ Hi, I'm Jinbo Wen. This is my profile [jinbowen1019.github.io](https://jinbowen1
 </tbody>
 </table>
 
-## 📫 Contact Information：
+## 📫 Contact Information
 <span><img src="https://img.shields.io/badge/City%20University%20of%20Hong%20Kong-brightgreen?style=plastic&logo=googlescholar&label=College%3A&link=https://www.cityu.edu.hk/">   
 <img src="https://img.shields.io/badge/jinbo1608@163.com-blue?style=social&logo=telegram&label=Email%3A"></span>  
