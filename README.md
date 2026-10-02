@@ -1,4 +1,4 @@
-Hi, my name is Jinbo Wen. This is my profile [jinbowen1019.github.io](https://jinbowen1019.github.io/)
+Hi, I'm Jinbo Wen. This is my profile [jinbowen1019.github.io](https://jinbowen1019.github.io/)
 
 ## 💬 Personal Information
 🔭 A Ph.D. student at City University of Hong Kong.
@@ -7,10 +7,9 @@ Hi, my name is Jinbo Wen. This is my profile [jinbowen1019.github.io](https://ji
 <table>
 <tbody>
   <tr>
-    <td><img src="./assets/python-logo.png" width=90 style="text-align:center;vertical-align:center" /></td>
-    <td><img src="./assets/pytorch-logo-dark.png" width=80 style="text-align:center;vertical-align:center" /></td>
-    <td><img src="./assets/scikit-learn-logo.png" width=50 style="text-align:center;vertical-align:center" /></td>
-    <td><img src="./assets/ubuntu-black-and-orange-on-white.gif" width=80 style="text-align:center;vertical-align:center" /></td>
+    <td><img src="./assets/ToolLogo/python-logo.png" width=90 style="text-align:center;vertical-align:center" /></td>
+    <td><img src="./assets/ToolLogo/pytorch-logo-dark.png" width=80 style="text-align:center;vertical-align:center" /></td>
+    <td><img src="./assets/ToolLogo/MATLABlogo.png" width=50 style="text-align:center;vertical-align:center" /></td>
   </tr>
 </tbody>
 </table>
