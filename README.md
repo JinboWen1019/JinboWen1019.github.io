@@ -1,1 +1,21 @@
 Hi, my name is Jinbo Wen. This is my profile [jinbowen1019.github.io](https://jinbowen1019.github.io/)
+
+## 💬 Personal Information
+🔭 A Ph.D. student from Guangdong University of Technology.
+
+   
+## 🌱 Languages and Tools:
+<table>
+<tbody>
+  <tr>
+    <td><img src="./assets/python-logo.png" width=90 style="text-align:center;vertical-align:center" /></td>
+    <td><img src="./assets/pytorch-logo-dark.png" width=80 style="text-align:center;vertical-align:center" /></td>
+    <td><img src="./assets/scikit-learn-logo.png" width=50 style="text-align:center;vertical-align:center" /></td>
+    <td><img src="./assets/ubuntu-black-and-orange-on-white.gif" width=80 style="text-align:center;vertical-align:center" /></td>
+  </tr>
+</tbody>
+</table>
+
+## 📫 Contact Information：
+<span><img src="https://img.shields.io/badge/City%20University%20of%20Hong%20Kong-brightgreen?style=plastic&logo=googlescholar&label=College%3A&link=https://www.cityu.edu.hk/">   
+<img src="https://img.shields.io/badge/jinbo1608@163.com-blue?style=social&logo=telegram&label=Email%3A"></span>  
