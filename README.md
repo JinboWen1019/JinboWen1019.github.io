@@ -1,9 +1,8 @@
 Hi, my name is Jinbo Wen. This is my profile [jinbowen1019.github.io](https://jinbowen1019.github.io/)
 
 ## 💬 Personal Information
-🔭 A Ph.D. student from Guangdong University of Technology.
+🔭 A Ph.D. student at City University of Hong Kong.
 
-   
 ## 🌱 Languages and Tools:
 <table>
 <tbody>
