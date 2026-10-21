@@ -713,6 +713,19 @@ html[data-theme="dark"] .theme-icon--sun { display: block; }
 .detail-list p { margin: 0; color: #574c44; font-size: calc(0.93rem + var(--font-bump)); line-height: 1.58; }
 .detail-list strong { color: #3f332c; }
 
+.patent-list { gap: 20px; }
+.patent-list li { grid-template-columns: 13px 53px minmax(0, 1fr); }
+.patent-list time { font-size: var(--date-font-size); }
+.patent-body { min-width: 0; }
+.patent-body p + p { margin-top: 6px; }
+.patent-title { font-weight: 700; text-decoration: none; }
+.patent-title:hover { text-decoration: underline; }
+.patent-list .patent-translation { color: var(--muted); }
+.patent-list .patent-meta {
+  color: var(--muted);
+  font-size: calc(0.84rem + var(--font-bump));
+}
+
 .service-groups { display: grid; gap: 30px; }
 .service-group h3 {
   margin: 0 0 12px;
@@ -837,9 +850,7 @@ html[data-theme="dark"] .contact-icon { filter: brightness(0) saturate(100%) inv
   .interest-card__visual { height: 190px; }
 }
 
-@media (max-width: 780px) {
-  :root { --header-height: 60px; }
-  .header-inner { width: min(calc(100% - 30px), var(--content-width)); }
+@media (max-width: 900px) {
   .nav-toggle {
     display: grid;
     gap: 4px;
@@ -865,6 +876,11 @@ html[data-theme="dark"] .contact-icon { filter: brightness(0) saturate(100%) inv
   .site-nav.is-open { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px 16px; }
   .site-nav a { padding: 9px 5px; }
   .site-nav a::after { display: none; }
+}
+
+@media (max-width: 780px) {
+  :root { --header-height: 60px; }
+  .header-inner { width: min(calc(100% - 30px), var(--content-width)); }
   .page-shell { display: block; width: min(calc(100% - 30px), var(--content-width)); }
   .profile { padding: 30px 0 27px; border-right: 0; border-bottom: 1px solid var(--line); }
   .profile-sticky {
@@ -916,6 +932,8 @@ html[data-theme="dark"] .contact-icon { filter: brightness(0) saturate(100%) inv
   .publication-group-title > div { align-items: flex-start; }
   .publication-group-title h3 { font-size: calc(1.02rem + var(--font-bump)); }
   .detail-list li { grid-template-columns: 12px 78px minmax(0, 1fr); gap: 8px; }
+  .patent-list li { grid-template-columns: 12px minmax(0, 1fr); }
+  .patent-list .patent-body { grid-column: 2; }
   .service-groups { gap: 25px; }
   .talk-list li { grid-template-columns: 12px 72px minmax(0, 1fr); }
   .site-footer { display: block; }
