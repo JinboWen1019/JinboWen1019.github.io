@@ -344,6 +344,23 @@ html[data-theme="dark"] .theme-icon--sun { display: block; }
   hyphens: auto;
 }
 
+.research-topics {
+  display: grid;
+  gap: 7px;
+  margin: 18px 0 0;
+  padding: 13px 20px 13px 38px;
+  color: #554b43;
+  background: #f2f3f4;
+  font-size: calc(0.93rem + var(--font-bump));
+  line-height: 1.55;
+}
+.research-topics li::marker { color: #75635c; }
+.research-topics li span { margin-left: 5px; font-size: 0.9em; }
+.research-overview { margin: 28px 0 0; background: #000; }
+.research-overview a { display: block; cursor: zoom-in; }
+.research-overview a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+.research-overview img { display: block; width: 100%; height: auto; }
+
 .eyebrow {
   display: block;
   margin-bottom: 10px;
@@ -392,76 +409,6 @@ html[data-theme="dark"] .theme-icon--sun { display: block; }
 }
 
 .section-more:hover { color: var(--blue); }
-
-.interest-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 31px;
-}
-
-.interest-card {
-  min-width: 0;
-  overflow: hidden;
-  border: 1px solid #ead8d0;
-  border-top: 3px solid #a7272d;
-  border-radius: 9px;
-  background: #fff;
-}
-
-.interest-card__head {
-  display: flex;
-  align-items: baseline;
-  gap: 9px;
-  padding: 15px 16px 12px;
-}
-
-.interest-card__head span {
-  color: #cf3d3f;
-  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
-  font-size: calc(0.78rem + var(--font-bump));
-  font-weight: 700;
-}
-
-.interest-card__head strong {
-  font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
-  font-size: calc(1rem + var(--font-bump));
-}
-
-.interest-card__visual {
-  position: relative;
-  height: 150px;
-  overflow: hidden;
-  background: #ffffff;
-}
-
-.interest-card__visual::after {
-  position: absolute;
-  inset: 0;
-  background: transparent;
-  content: "";
-  pointer-events: none;
-}
-
-.interest-card__visual img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  padding: 6px;
-  object-fit: contain;
-  object-position: center;
-  filter: none;
-  transform: none;
-}
-
-.interest-card small {
-  display: block;
-  min-height: 61px;
-  padding: 12px 16px 15px;
-  color: var(--muted);
-  font-size: calc(0.82rem + var(--font-bump));
-  line-height: 1.45;
-}
 
 .news-list {
   position: relative;
@@ -784,7 +731,6 @@ html[data-theme="dark"] .theme-icon--sun { display: block; }
 .talk-list p { color: var(--muted); }
 .talk-list .talk-title-zh { margin-top: 5px; color: var(--blue); font-size: calc(0.82rem + var(--font-bump)); }
 
-.interest-card__head span,
 .news-list time,
 .timeline-date,
 .experience-label,
@@ -821,12 +767,10 @@ html[data-theme="dark"] .profile-role,
 html[data-theme="dark"] .contact-list a { color: #cbbdb6; }
 html[data-theme="dark"] .theme-toggle { color: #f0c978; border-color: var(--line); background: var(--paper); }
 html[data-theme="dark"] .avatar,
-html[data-theme="dark"] .interest-card,
 html[data-theme="dark"] .news-list,
 html[data-theme="dark"] .experience-card,
 html[data-theme="dark"] .publication--review { background: var(--wash); }
-html[data-theme="dark"] .interest-card { border-color: #4a3933; border-top-color: #dc5d5d; }
-html[data-theme="dark"] .interest-card__visual { background: #ffffff; }
+html[data-theme="dark"] .research-topics { color: #d4cbc6; background: #292624; }
 html[data-theme="dark"] .section h2,
 html[data-theme="dark"] .section h3,
 html[data-theme="dark"] .section > p,
@@ -863,9 +807,6 @@ html[data-theme="dark"] .contact-icon { filter: brightness(0) saturate(100%) inv
   .page-shell { grid-template-columns: 205px minmax(0, 1fr); gap: 38px; }
   .profile-sticky { padding-right: 24px; }
   .avatar { width: 130px; }
-  .interest-grid { grid-template-columns: 1fr; }
-  .interest-card { min-height: 0; }
-  .interest-card__visual { height: 190px; }
 }
 
 @media (max-width: 900px) {
@@ -936,8 +877,6 @@ html[data-theme="dark"] .contact-icon { filter: brightness(0) saturate(100%) inv
   .contact-list { gap: 14px; }
   .contact-list a { gap: 5px; font-size: calc(0.78rem + var(--font-bump)); }
   .section-more { display: none; }
-  .interest-grid { gap: 8px; }
-  .interest-card__visual { height: 165px; }
   .news-list { padding: 5px 14px; }
   .news-list article { grid-template-columns: 28px 58px 1fr; gap: 8px; }
   .news-icon { width: 27px; height: 27px; }
