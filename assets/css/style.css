@@ -356,7 +356,16 @@ html[data-theme="dark"] .theme-icon--sun { display: block; }
 }
 .research-topics li::marker { color: #75635c; }
 .research-topics li span { margin-left: 5px; font-size: 0.9em; }
-.research-overview { margin: 28px 0 0; background: #000; }
+.research-overview {
+  width: min(82%, 720px);
+  margin: 28px auto 0;
+  padding: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--blue-bright);
+  border-radius: 9px;
+  background: var(--paper);
+}
 .research-overview a { display: block; cursor: zoom-in; }
 .research-overview a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
 .research-overview img { display: block; width: 100%; height: auto; }
@@ -876,6 +885,7 @@ html[data-theme="dark"] .contact-icon { filter: brightness(0) saturate(100%) inv
   .profile-location { font-size: calc(0.73rem + var(--font-bump)); }
   .contact-list { gap: 14px; }
   .contact-list a { gap: 5px; font-size: calc(0.78rem + var(--font-bump)); }
+  .research-overview { width: 100%; padding: 7px; }
   .section-more { display: none; }
   .news-list { padding: 5px 14px; }
   .news-list article { grid-template-columns: 28px 58px 1fr; gap: 8px; }
