@@ -551,6 +551,24 @@ html[data-theme="dark"] .theme-icon--sun { display: block; }
 .timeline h3 { margin: 3px 0 2px; font-size: calc(1.02rem + var(--font-bump)); }
 .timeline p { margin: 0; color: #5c5149; font-size: calc(0.94rem + var(--font-bump)); }
 .timeline small { color: var(--muted); font-size: calc(0.79rem + var(--font-bump)); }
+.institution-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.institution-name > span { min-width: 0; }
+.institution-logo {
+  display: block;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  aspect-ratio: 1;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #fff;
+  object-fit: contain;
+}
+.institution-logo--lab { object-fit: cover; }
 .rank-highlight {
   color: #ee0000;
   font-family: "Lato", "Microsoft YaHei", "PingFang SC", sans-serif;
